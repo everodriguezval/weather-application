@@ -1,3 +1,5 @@
+import apiKey from "./apikey.js";
+
 function weather(city) {
   // const apiKey = process.env.API_KEY1;
   const endpoint = "https://api.openweathermap.org/data/2.5/weather";
@@ -59,8 +61,9 @@ function weather(city) {
 // Image searching API:
 function getBackgroundImg(city2) {
   const endpoint2 = `https://api.unsplash.com/search/photos`;
+  const unsplash = "0bvni6lrimPNrUpgnvJqKM6CiTq5ZOtfMC7LsXATJ9I";
   // const apiKey2 = process.env.API_KEY2;
-  const apiUrl2 = `${endpoint2}?client_id=${apiKey2}&page=1&query=${city2}`;
+  const apiUrl2 = `${endpoint2}?client_id=${unsplash}&page=1&query=${city2}`;
 
   fetch(apiUrl2)
     .then(function (response) {
