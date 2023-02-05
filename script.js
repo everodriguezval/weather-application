@@ -1,6 +1,5 @@
-import { apiKey, apiKey2 } from "./keys.js";
-
 function weather(city) {
+  // const apiKey = process.env.API_KEY1;
   const endpoint = "https://api.openweathermap.org/data/2.5/weather";
   const unit = "metric";
   const language = "en";
@@ -60,7 +59,7 @@ function weather(city) {
 // Image searching API:
 function getBackgroundImg(city2) {
   const endpoint2 = `https://api.unsplash.com/search/photos`;
-
+  // const apiKey2 = process.env.API_KEY2;
   const apiUrl2 = `${endpoint2}?client_id=${apiKey2}&page=1&query=${city2}`;
 
   fetch(apiUrl2)
